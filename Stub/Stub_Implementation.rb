@@ -1,7 +1,6 @@
 require 'webmock'
 require 'rest-client'
 require 'rubygems'
-require 'rest-client' 
 require 'json'
 require 'base64'
 
