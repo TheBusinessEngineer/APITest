@@ -3,9 +3,11 @@
 # BEGIN: User Configurable Test Settings
 module TestInitialSettings
   $apiUri = "https://api.github.com"
-  $userlogin = "junutula" #dummy
-  #$userpass = 'ZUVuYWQjMTk4MQ==\n' #dummy Base64
-  $userpass = "junutulaPass"  #dummy Can replace with real credentials and comment webmock gem in the driver script
+  $userlogin = "junutula" 
+  #$userpass = 'ZUVHRKYWQjMTk4MQ==\kkn'# Dummy base64 
+                                          # To make sure the test script works with stub implementation and actual end point,
+                                          # commented out base64 encoded password 
+  $userpass = 'junutula'  #dummy Can replace with real credentials to run it with real end point
 end
 
 

@@ -11,7 +11,7 @@
     # Req Test Execution Settings
     require '../Utilities/InitSettings.rb'
     require '../Utilities/Metadata.rb'
-    require '../Stub/Stub_Implementation.rb'
+    require '../Stub/Stub_Implementation.rb' # comment Stub script to run it with real end point
     
 #-------------------------------------------#
 
@@ -23,17 +23,17 @@ class TestTeamAPI < Minitest::Unit::TestCase
   def test_TeamAPI
     begin
           
-      TeamCreate() #create Team and validate
+      TeamCreate() #create Team and validate the response
                         
-      TeamEdit() #update Team and validate
+      TeamEdit() #update Team and validate the response
             
-      TeamGet() #Get Team and validate
+      TeamGet() #Get Team and validate the response
 
-      TeamDelete() #update Team and validate
+      TeamDelete() #update Team and validate the response
 
-      TeamCreateWInvalidJSON() #create Team with Invalid Json and validate
+      TeamCreateWInvalidJSON() #create Team with Invalid Json and validate the response
 
-      TeamCreateWInvalidField() #create Team with Invalid Field and validate
+      TeamCreateWInvalidField() #create Team with Invalid Field and validate the response
 
                         
     rescue Exception => e
@@ -92,13 +92,11 @@ class TestTeamAPI < Minitest::Unit::TestCase
   def TeamCreateWInvalidJSON()
       Team.APIrequest("CREATEwInvalidJSON")
       assert_equal(400,$ReqResponse.code,"[ErrMsg] #{$ReqResponse}")
-      assert_equal("Problems parsing JSON",$errorMessage,"[ErrMsg] Message doesn't match")
   end
 
   def TeamCreateWInvalidField()
       Team.APIrequest("CREATEwInvalidField")
       assert_equal(422,$ReqResponse.code,"[ErrMsg] #{$ReqResponse}")
-      assert_equal("Validation Failed",$errorMessage,"[ErrMsg] Message doesn't match")
   end
 	
 end
