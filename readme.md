@@ -7,6 +7,8 @@ Gems needed to run the script
 3. webmock
 4. json
 
+Picked /teams endpoint for this exercise as Team functionality with create/edit/delete/get is ideal to automate all these scenarios.
+
 Test Run is based on Settings in InitSettings.rb 
 
 Test script is run from Drivers
