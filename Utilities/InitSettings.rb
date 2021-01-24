@@ -18,11 +18,11 @@ module UserAPISettings
 end
 
 module TeamAPISettings
-  $Org = "CognitiveTest"
-  $TeamName = "TeamCogScale"
+  $Org = "SCTest"
+  $TeamName = "TeamSC"
   $perm = "admin"
-  $repo = "junutula/Cognitive"
-  $updTeamName = "UpdTeamCogScale"
+  $repo = "junutula/SC"
+  $updTeamName = "UpdTeamSC"
   $updperm = "push"
   $teamID = 123456
 end
