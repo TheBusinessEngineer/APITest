@@ -63,7 +63,6 @@ class TestTeamAPI < Minitest::Unit::TestCase
       assert_equal($TeamName, $name,"[ErrMsg] TeamName doesn't match")
       assert_equal($perm, $permission,"[ErrMsg] Permission doesn't match")
       assert_equal(0, $memCount,"[ErrMsg] Member Count doesn't match")
-      assert_equal($Org, $Orglogin,"[ErrMsg] Organization doesn't match")
   end
   
   def TeamEdit()
@@ -72,7 +71,6 @@ class TestTeamAPI < Minitest::Unit::TestCase
       assert_equal($updTeamName, $name,"[ErrMsg] TeamName doesn't match")
       assert_equal($updperm, $permission,"[ErrMsg] Permission doesn't match")
       assert_equal(0, $memCount,"[ErrMsg] Member Count doesn't match")
-      assert_equal($Org, $Orglogin,"[ErrMsg] Organization doesn't match")
   end
   
   def TeamDelete()
@@ -86,7 +84,6 @@ class TestTeamAPI < Minitest::Unit::TestCase
       assert_equal($updTeamName, $name,"[ErrMsg] TeamName doesn't match")
       assert_equal($updperm, $permission,"[ErrMsg] Permission doesn't match")
       assert_equal(0, $memCount,"[ErrMsg] Member Count doesn't match")
-      assert_equal($Org, $Orglogin,"[ErrMsg] Organization doesn't match")
   end
 
   def TeamCreateWInvalidJSON()
